@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+
+
+ function Navbar() {
+
+  const [dropdown, setDropdown] = useState(false);
+  
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -30,36 +31,30 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+        <Link to='/' className='navbar-logo' >
           CraveSavor
         </Link>
 
 
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <ul className='nav-menu'>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}> Home </Link>
+            <Link to='/' className='nav-links' > Home </Link>
           </li>
 
           <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Link to='/recipe' className='nav-links' onClick={closeMobileMenu} > Recipe <i className='fas fa-caret-down' /></Link>
+            <Link to='/recipe' className='nav-links' > Recipe <i className='fas fa-caret-down' /></Link>
             {dropdown && <Dropdown />}
 
           </li>
           <li className='nav-item'>
-            <Link to='/save' className='nav-links'onClick={closeMobileMenu}>Save</Link>
+            <Link to='/save' className='nav-links'>Save</Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about-us' className='nav-links' onClick={closeMobileMenu}>About Us</Link>
+            <Link to='/about-us' className='nav-links'>About Us</Link>
           </li>
 
-          <li>
-            <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>Sign Up</Link>
-          </li>
         </ul>
+        
         <Button />
       </nav>
     </>

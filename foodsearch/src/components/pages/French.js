@@ -5,15 +5,15 @@ export default function French(){
     return (
         <>
         <div className="display-img">
-            <img src="https://www.expatica.com/app/uploads/sites/5/2014/05/french-food.jpg"></img>
+            <img alt="" src="https://www.expatica.com/app/uploads/sites/5/2014/05/french-food.jpg" hre></img>
         </div>
         <div className="type-of-recipe"><h1 className="type-of-recipe">French Food</h1></div>
         <div className="french-container" >
-            <Link className="abc" to='/Common-bread'><div className="french-box"><img className="img" src="https://dreamsinparis.com/wp-content/uploads/2022/09/French-bread-types-1024x768.jpg"></img>
+            <Link className="abc" to='/Common-bread'><div className="french-box"><img alt="" className="img" src="https://dreamsinparis.com/wp-content/uploads/2022/09/French-bread-types-1024x768.jpg"></img>
                 <div className="french-names"><h2 className="french-name">Common bread</h2></div>
             </div></Link>
 
-            <Link className="abc" to='Viennoiseries'><div className="french-box"><img className="img" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Pain_au_chocolat_Luc_Viatour.jpg"></img>
+            <Link className="abc" to='Viennoiseries'><div className="french-box"><img alt=''className="img" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Pain_au_chocolat_Luc_Viatour.jpg"></img>
                 <div className="french-names"><h2 className="french-name">Viennoiseries</h2></div>
             </div></Link>
 

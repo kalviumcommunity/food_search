@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./Vegetarian.css";
-export default function Vegetarian() {
+import { Link } from "react-router-dom";
+export default function IndianSweet() {
   const [advice, setAdvice] = useState([]);
-  const API=process.env.REACT_APP_KEY +'/home?foodtype=Vegetarian'
+  const API=process.env.REACT_APP_KEY +'/home?foodtype=IndianSweet'
   useEffect(() => {
     fetch(API)
       .then((res) => res.json())
